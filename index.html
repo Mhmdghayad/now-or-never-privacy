@@ -21,7 +21,7 @@ a{color:var(--accent);font-weight:600}
 <body>
 <main><div class="brand">Now or Never</div><div class="card">
 <h1>Now or Never – Privacy Policy</h1>
-<p>Last updated 4 October 2026.</p>
+<p>Last updated 10 October 2026. <a href="privacy-ar.html" lang="ar">العربية</a></p>
 <p>Now or Never is a nutrition diary. This page explains what the app collects, why, who it is shared with, and how to delete it.</p>
 
 <h2>What we collect</h2>
@@ -34,14 +34,15 @@ a{color:var(--accent);font-weight:600}
 <li><b>Searches that found nothing:</b> the words of a food search that returned no match, or whose matches were passed over, kept without any link to your account so the missing dishes can be added.</li>
 <li><b>Free access:</b> if you are given free access to the app, your email address is kept on that list until it is removed.</li>
 <li><b>Usage counts:</b> how many AI analyses and food searches your account made each day, used only to keep the service within its limits.</li>
+<li><b>App usage and crashes:</b> see <a href="#analytics">Analytics and crash reports</a> below.</li>
 </ul>
 <p>Reminders, your language, your avatar, your step goal and display settings stay on your phone.</p>
 
-<h2>Steps from Samsung Health (Health Connect)</h2>
-<p>If you choose to connect it in <b>Settings → Samsung Health</b>, the app reads one thing from Android Health Connect: your <b>step count</b>, as Samsung Health records it. It asks for read access to steps only and never writes anything to Health Connect or Samsung Health.</p>
+<h2 id="health">Steps from Health Connect (Samsung Health)</h2>
+<p>If you choose to connect it in <b>Settings → Samsung Health</b>, the app reads one thing from Android Health Connect: <b>today's step count</b>, as Health Connect totals it from the apps and devices that record your steps (for example Samsung Health, a Galaxy Watch or the phone's own counter), without counting the same steps twice. It asks for read access to steps only and never writes anything to Health Connect or Samsung Health.</p>
 <ul>
-<li><b>What it is used for:</b> showing today's steps against your step goal on the Home screen, and an estimate of the calories burned walking (0.038 kcal a step). That estimate is shown only; it does not change your calorie target.</li>
-<li><b>Where it goes:</b> nowhere. Your steps are read on your phone, kept on your phone, and are not sent to our servers or to anyone else.</li>
+<li><b>What it is used for:</b> showing today's steps against your step goal on the Home screen, and an estimate of the calories burned walking (steps × your weight in kg × 0.0005). That estimate is shown only; it does not change your calorie target.</li>
+<li><b>Where it goes:</b> nowhere. Your steps are read on your phone, kept on your phone, and are not sent to our servers, to our analytics, or to anyone else.</li>
 <li><b>Not used for anything else:</b> steps are never used for advertising, never sold, and never used to train AI models.</li>
 <li><b>Turning it off:</b> tap <b>Disconnect</b> in Settings → Samsung Health, or remove the permission in the Health Connect app at any time.</li>
 </ul>
@@ -53,9 +54,18 @@ a{color:var(--accent);font-weight:600}
 <li><b>USDA FoodData Central:</b> the words you search for, sent through our server.</li>
 <li><b>Open Food Facts:</b> barcode numbers and product searches, sent from your phone.</li>
 <li><b>TheMealDB:</b> the ingredients you enter in Fridge to Table, sent through our server.</li>
-<li><b>Google:</b> sign-in with Google and Google Play subscriptions.</li>
+<li><b>Google:</b> sign-in with Google, Google Play subscriptions, and Firebase (analytics and crash reports, below).</li>
 </ul>
-<p>A plain-text meal description (never a photo, and never linked to your account) may be kept so the same description gives the same numbers to the next person who types it. We do not sell data, do not show ads, and do not use analytics or advertising trackers.</p>
+<p>A plain-text meal description (never a photo, and never linked to your account) may be kept so the same description gives the same numbers to the next person who types it. We do not sell data and do not show ads.</p>
+
+<h2 id="analytics">Analytics and crash reports</h2>
+<p>The app uses Google <b>Firebase Analytics</b> and <b>Firebase Crashlytics</b> to understand how the app is used and to fix crashes.</p>
+<ul>
+<li><b>Analytics:</b> which screens are opened and a few actions: signing up or in (and whether by email or Google), logging a meal (and whether by photo, voice, barcode, search or typing), a photo upload succeeding or failing, connecting Health Connect, opening the subscription page and starting a subscription. Firebase adds the app version, device model, Android version, language and an approximate country. Events are linked to a random Firebase install id and to your account id - never to your name or email.</li>
+<li><b>Crash reports:</b> when the app crashes, the error, the device model and Android version, and your account id.</li>
+<li><b>Never sent:</b> what you ate, calories or nutrients, your weight or other body measurements, your steps, photos or anything you type.</li>
+<li><b>No advertising:</b> the advertising ID is not collected and the data is not used for ads.</li>
+</ul>
 
 <h2>Where it is stored</h2>
 <p>Data is stored with Supabase (hosted on AWS) under your own account, with row-level security so only you can read your diary. Photos are kept in a private storage bucket. Everything is encrypted in transit.</p>
