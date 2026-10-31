@@ -34,6 +34,8 @@ a{color:var(--accent);font-weight:600}
 <li><b>Searches that found nothing:</b> the words of a food search that returned no match, or whose matches were passed over, kept without any link to your account so the missing dishes can be added.</li>
 <li><b>Free access:</b> if you are given free access to the app, your email address is kept on that list until it is removed.</li>
 <li><b>Products you add:</b> when a barcode is in no database and you choose <b>Add this product</b>, the photo of the nutrition panel (and of the front, if you take one) is sent to Anthropic to read the label. The product - its name, brand and the numbers printed on it - is then saved to a shared list so the next person who scans that packet gets it. The panel photo is kept in a private store as evidence for checking the row. If you delete your account, your label photos are deleted and the product stays on the list with no link to you.</li>
+<li><b>Feedback:</b> if you use <b>Send feedback</b> in Settings, the stars you chose and the note you wrote, with the app version and language. Only we can read it; it is not posted anywhere. It is stored with your account and deleted with it.</li>
+<li><b>Reports on AI answers:</b> if you tap <b>Report this</b> under a meal estimate or a recipe, the reason you chose, the note you wrote, the estimate or recipe you reported (its name and numbers, never a photo), with the app version and language. Only we can read it. It is stored with your account and deleted with it.</li>
 <li><b>Usage counts:</b> how many AI analyses and food searches your account made each day, used only to keep the service within its limits.</li>
 <li><b>App usage and crashes:</b> see <a href="#analytics">Analytics and crash reports</a> below.</li>
 </ul>
@@ -70,9 +72,10 @@ a{color:var(--accent);font-weight:600}
 
 <h2>Where it is stored</h2>
 <p>Data is stored with Supabase (hosted on AWS) under your own account, with row-level security so only you can read your diary. Photos are kept in a private storage bucket. Everything is encrypted in transit.</p>
+<p>So that data can be recovered after an accident, an encrypted copy of the database and photos is made every night and kept for 30 days in Google Drive. Only we hold the key to read it.</p>
 
 <h2>Keeping and deleting your data</h2>
-<p>Your data is kept until you delete it. In the app, <b>Settings → Delete account</b> removes your account, diary, weigh-ins and photos immediately and permanently. You can also export everything first from Settings. If you cannot use the app, see <a href="delete.html">how to request deletion</a>.</p>
+<p>Your data is kept until you delete it. In the app, <b>Settings → Delete account</b> removes your account, diary, weigh-ins and photos from the app immediately and permanently, and from the nightly backups within 30 days. You can also export everything first from Settings. If you cannot use the app, see <a href="delete.html">how to request deletion</a>.</p>
 
 <h2>Children</h2>
 <p>Now or Never is meant for adults and is not directed at children under 16.</p>
